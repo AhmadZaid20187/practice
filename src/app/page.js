@@ -4,12 +4,34 @@ import Actor from "./components/Actor.jsx";
 
 export default function Home() {
 
-  const actors = ["amir khan", "nayok khan", "ami khan"]
+  // const actors = ["amir khan", "nayok khan", "ami khan"]
+  const actors = [
+
+    {
+      id: 1,
+      name: "amir khan",
+      age: 56,
+    },
+    {
+      id: 2,
+      name: "nayok khan",
+      age: 67,
+    },
+    {
+      id: 3,
+      name: "ami khan",
+      age: 89
+    }
+
+  ]
+
+
+
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
 
       {
-        actors.map(actor => <Actor actor={actor} key={actor}></Actor>)
+        actors.map(actor => <Actor key={actor.id} actor={actor} ></Actor>)
       }
 
 
