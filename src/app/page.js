@@ -38,10 +38,10 @@ export default function Home() {
       <Count></Count>
 
 
-      <h2 className="text-5xl font-bold">Actors Name:</h2>
+      {/* <h2 className="text-5xl font-bold">Actors Name:</h2>
       {
         actors.map(actor => <Actor key={actor.id} actor={actor} ></Actor>)
-      }
+      } */}
 
 
       {/* <h2 className="text-2xl">The thing I have done:</h2> */}
