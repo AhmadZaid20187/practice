@@ -3,29 +3,30 @@ import Todo from "./components/Todo";
 import Actor from "./components/Actor.jsx";
 import Count from "./components/Count";
 import PlayerCount from "./components/PlayerRuns";
+import Btn from "./components/Btn";
 
 export default function Home() {
 
   // const actors = ["amir khan", "nayok khan", "ami khan"]
-  const actors = [
+  // const actors = [
 
-    {
-      id: 1,
-      name: "amir khan",
-      age: 56,
-    },
-    {
-      id: 2,
-      name: "nayok khan",
-      age: 67,
-    },
-    {
-      id: 3,
-      name: "ami khan",
-      age: 89
-    }
+  //   {
+  //     id: 1,
+  //     name: "amir khan",
+  //     age: 56,
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "nayok khan",
+  //     age: 67,
+  //   },
+  //   {
+  //     id: 3,
+  //     name: "ami khan",
+  //     age: 89
+  //   }
 
-  ]
+  // ]
 
 
 
@@ -36,6 +37,8 @@ export default function Home() {
 
 
       <Count></Count>
+
+      <Btn></Btn>
 
 
       {/* <h2 className="text-5xl font-bold">Actors Name:</h2>
