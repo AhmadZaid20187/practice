@@ -44,11 +44,13 @@ const PlayerRuns = () => {
 
     return (
         <div className='p-7 border border-amber-100 m-5 rounded-2xl px-30'>
-            <h1>Player: Bangladesh</h1>
+            <h1 className='text-4xl font-bold'>Player: Bangladesh</h1>
 
             {
                 runs >= 50 && <p>You have score: 50</p>
             }
+
+
 
             <div className='p-3 flex items-center space-x-3'>
                 <p className='text-2xl'>Total Runs: {runs}</p>
