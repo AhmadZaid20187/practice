@@ -4,6 +4,8 @@ import Actor from "./components/Actor.jsx";
 import Count from "./components/Count";
 import PlayerCount from "./components/PlayerRuns";
 import Btn from "./components/Btn";
+import Users from "./components/Users";
+import { Suspense } from "react";
 
 export default function Home() {
 
@@ -28,10 +30,24 @@ export default function Home() {
 
   // ]
 
+  const user = async () => {
+    const res = await fetch("https://jsonplaceholder.typicode.com/users");
+    const data = await res.json();
+    return data;
+  }
 
 
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+
+      <Suspense fallback={<h3 className="text-3xl font-semibold">Loading......</h3>}>
+
+        <Users user={user} />
+
+      </Suspense>
+
+
+
 
       <PlayerCount></PlayerCount>
 
@@ -39,6 +55,13 @@ export default function Home() {
       <Count></Count>
 
       <Btn></Btn>
+
+
+
+
+
+
+
 
 
       {/* <h2 className="text-5xl font-bold">Actors Name:</h2>
