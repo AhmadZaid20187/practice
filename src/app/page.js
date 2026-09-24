@@ -6,6 +6,7 @@ import PlayerCount from "./components/PlayerRuns";
 import Btn from "./components/Btn";
 import Users from "./components/Users";
 import { Suspense } from "react";
+import Players from "./components/Players";
 
 export default function Home() {
 
@@ -40,11 +41,14 @@ export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
 
-      <Suspense fallback={<h3 className="text-3xl font-semibold">Loading......</h3>}>
+      <Players></Players>
+
+
+      {/* <Suspense fallback={<h3 className="text-3xl font-semibold">Loading......</h3>}>
 
         <Users user={user} />
 
-      </Suspense>
+      </Suspense> */}
 
 
 

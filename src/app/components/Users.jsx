@@ -1,9 +1,13 @@
+import { use } from "react";
+
 const Users = async ({ user }) => {
     const users = await user();
+    const data = users
+    console.log(data)
 
     return (
         <div className='border border-amber-200 py-10 px-20 rounded-2xl'>
-            <h2 className='text-4xl'>Users</h2>
+            <h2 className='text-4xl'>Users: {users.length}</h2>
             <ul>
                 {users.map((currentUser) => (
                     <li key={currentUser.id}>{currentUser.name}</li>
