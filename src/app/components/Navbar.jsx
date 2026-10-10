@@ -30,31 +30,40 @@ const Navbar = () => {
         },
     ];
 
+    const Links = navItems.map(item => {
+        const Icon = item.icon;
+        return (
+            <Link
+                key={item.id}
+                href={item.path}
+                className="flex items-center gap-3"
+            >
+                <Icon />
+                {item.text}
+            </Link>
+        );
+    })
+
     return (
         <div className="flex justify-between m-5">
 
             <span className="flex gap-2 items-center" onClick={() => setOpen(!open)}>
-                {
-                    open ? <IoCloseSharp size={25} /> : <GiHamburgerMenu size={25} />
-                }
+                <span className="lg:hidden">
+                    {
+                        open ? <IoCloseSharp size={25} /> : <GiHamburgerMenu size={25} />
+                    }
+                </span>
+                <div className="md:hidden">
+                    {
+                        Links
+                    }
+                </div>
                 <h2>Navbar</h2>
             </span>
 
-            <div className="flex space-x-5">
+            <div className="hidden md:flex space-x-5">
                 {
-                    navItems.map(item => {
-                        const Icon = item.icon;
-                        return (
-                            <Link
-                                key={item.id}
-                                href={item.path}
-                                className="flex items-center gap-3"
-                            >
-                                <Icon />
-                                {item.text}
-                            </Link>
-                        );
-                    })
+                    Links
                 }
             </div>
 
